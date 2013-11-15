@@ -91,9 +91,9 @@ class MY_Controller extends MX_Controller
 
 
         # Check login
-        if (!session_login() AND ($this->_controller != 'auth') ) {
-            redirect(create_url('login'));
-        }
+//         if (!session_login() AND ($this->_controller != 'auth') ) {
+//             redirect(create_url('login'));
+//         }
 
         # Language
         $all_language        = $this->config->item('language_array');
@@ -242,7 +242,7 @@ class MY_Controller extends MX_Controller
     {
         foreach ($this->models as $model)
         {
-            $this->load->model($this->_model_name($model), $model);
+            $this->load->model($this->_modules . '/'.$this->_model_name($model), $model);
         }
     }
 

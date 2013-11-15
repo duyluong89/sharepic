@@ -39,7 +39,7 @@
 */
 
 $route['captcha.jpg']                = "ps/captcha";
-$route['default_controller']         = "sys/auth/login";
+$route['default_controller']         = "pic/home/index";
 #$route['404_override']               = '';
 
 
